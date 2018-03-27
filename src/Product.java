@@ -20,7 +20,7 @@ public class Product {
         return name;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
