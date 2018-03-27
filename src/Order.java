@@ -35,6 +35,14 @@ public class Order {
         return DataBase.getInstance().getOrder(id);
     }
 
-
+    public static Integer totalPrice(List<Integer> products_id,Integer id){
+        Integer totalPrice =0;
+        for(int i=0;i<products_id.size();i++) {
+            Product produs = new Product();
+            produs.getProduct(products_id.get(i));
+            totalPrice += produs.getPrice();
+        }
+        return totalPrice;
+    }
 
 }
