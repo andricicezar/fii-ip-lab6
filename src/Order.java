@@ -8,7 +8,11 @@ public class Order {
 
     Order(Integer id) {
         this.id = id;
-        this.products_id = new ArrayList<>();
+        this.products_id = new ArrayList<Integer>();
+    }
+
+    public Order() {
+
     }
 
     public Integer getId() {

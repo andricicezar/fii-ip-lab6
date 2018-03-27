@@ -1,16 +1,26 @@
-import javax.xml.crypto.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataBase {
     private List<User> usersList;
-   // ArrayList<Product> productsList = new ArrayList<Product>();
+    private List<Product> productsList;
     private List<Order> ordersList;
     private static DataBase instance;
 
     private DataBase() {
-        usersList = new ArrayList<>();
-        ordersList = new ArrayList<>();
+        usersList = new ArrayList<User>();
+        ordersList = new ArrayList<Order>();
+        productsList = new ArrayList<Product>();
+        User first = new User();
+        Order firstO = new Order();
+
+
+        first.setEmail("a");
+        first.setUsername("firstUser");
+
+
+
     }
 
     public static DataBase getInstance() {
@@ -27,6 +37,10 @@ public class DataBase {
 
     public Order getOrder(Integer id) {
         return ordersList.get(id);
+    }
+
+    public Product getProduct(Integer id) {
+        return productsList.get(id);
     }
 
 //    public Order createOrder(Integer user_id, Integer[] product_ids) {
