@@ -13,14 +13,15 @@ public class DataBase {
         ordersList = new ArrayList<Order>();
         productsList = new ArrayList<Product>();
         User first = new User();
-        Order firstO = new Order();
+        Product product = new Product();
+        Order order = new Order(200);
 
 
         first.setEmail("a");
         first.setUsername("firstUser");
-
-
-
+        product.setName("Computer");
+        product.setPrice(500);
+        product.setId(1000);
     }
 
     public static DataBase getInstance() {

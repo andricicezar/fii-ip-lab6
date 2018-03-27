@@ -15,6 +15,7 @@ public class Product {
     public void setPrice(Integer price) {
         this.price = price;
     }
+    public void setId(Integer id) { this.id = id;}
 
     public String getName() {
         return name;
