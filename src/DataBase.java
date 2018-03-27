@@ -50,6 +50,11 @@ public class DataBase {
         return productsList.get(id);
     }
 
-//    public Order createOrder(Integer user_id, Integer[] product_ids) {
-//    }
+    public Order createOrder(ArrayList<Integer> idsProduct, Integer userId, Integer orderId) {
+
+        Order newOrder = new Order(orderId);
+        newOrder.setUserId(userId);
+        newOrder.setProductsId(idsProduct);
+        return newOrder;
+    }
 }
