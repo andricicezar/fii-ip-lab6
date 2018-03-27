@@ -11,10 +11,6 @@ public class Order {
         this.products_id = new ArrayList<Integer>();
     }
 
-    public Order() {
-
-    }
-
     public Integer getId() {
         return id;
     }
