@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.testng.annotations.Test;
 
 public class UserTest {
@@ -8,17 +9,21 @@ public class UserTest {
     }
 
     @org.junit.Test
-    public void setEmail(String email) {
-        assert(email.contains("."));
-        assert(email.contains("@"));
-        assert(email.contentEquals(""));
-        assert(email.length()==0 || email.length()>100);
+    public void setEmail() {
+        User user = new User();
+        user.setEmail("asdfasdfdsa");
+        if (user.getEmail() == "asdfasdfdsa")
+            Assert.fail("Nu s-a setat email-ul.");
+        if (!user.getEmail().contains(".") || !user.getEmail().contains("@"))
+            Assert.fail("Email invalid");
     }
 
     @org.junit.Test
-    public void setUsername(String username) {
-        assert(username.contentEquals(""));
-        assert(username.length()==0 || username.length()>100);
+    public void setUsername() {
+        User user = new User();
+        user.setUsername("asdfasdfdsa");
+        if (user.getUsername() == "asdfasdfdsa")
+            Assert.fail("Nu s-a setat numele.");
     }
 
     @org.junit.Test
