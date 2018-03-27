@@ -8,7 +8,11 @@ public class Order {
 
     Order(Integer id) {
         this.id = id;
-        this.products_id = new ArrayList<>();
+        this.products_id = new ArrayList<Integer>();
+    }
+
+    public Order() {
+
     }
 
     public Integer getId() {
@@ -32,11 +36,11 @@ public class Order {
     }
 
     public static Order getOrder(Integer id) {
-        return BD.getOrder(id);
+        return DataBase.getInstance().getOrder(id);
     }
 
-    public static Order create(Integer user_id, Integer... product_ids) {
-        return BD.createOrder(user_id, product_ids);
-    }
+//    public static Order create(Integer user_id, Integer... product_ids) {
+//        return DataBase.getInstance().createOrder(user_id, product_ids);
+//    }
 
 }

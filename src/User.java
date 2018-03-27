@@ -5,7 +5,7 @@ public class User {
 
 
     public static User getUser(Integer id) {
-        return BD.getUser(id);
+        return DataBase.getInstance().getUser(id);
     }
 
     public void setEmail(String email) {
@@ -15,6 +15,8 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public void setId(Integer id) { this.id = id; }
 
     public String getEmail() {
         return email;
