@@ -35,8 +35,9 @@ public class Order {
         return DataBase.getInstance().getOrder(id);
     }
 
-//    public static Order create(Integer user_id, Integer... product_ids) {
-//        return DataBase.getInstance().createOrder(user_id, product_ids);
-//    }
+    public static Order create(Integer user_id, Integer... product_ids) {
+        Order order = new Order(10);
+        return order;
+    }
 
 }
