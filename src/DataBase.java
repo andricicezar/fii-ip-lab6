@@ -1,16 +1,34 @@
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DataBase {
-    ArrayList<User> usersList = new ArrayList<User>();
-    ArrayList<Product> productsList = new ArrayList<Product>();
-    ArrayList<Order> ordersList = new ArrayList<Order>();
+    private List<User> usersList;
+   // ArrayList<Product> productsList = new ArrayList<Product>();
+    private List<Order> ordersList;
+    private static DataBase instance;
 
-    public static User getUser(Integer id) {
+    private DataBase() {
+        usersList = new ArrayList<>();
+        ordersList = new ArrayList<>();
     }
 
-    public static Order getOrder(Integer id) {
+    public static DataBase getInstance() {
+        if (instance == null) {
+            instance = new DataBase();
+        }
+
+        return instance;
     }
 
-    public static Order createOrder(Integer user_id, Integer[] product_ids) {
+    public User getUser(Integer id) {
+        return usersList.get(id);
     }
+
+    public Order getOrder(Integer id) {
+        return ordersList.get(id);
+    }
+
+//    public Order createOrder(Integer user_id, Integer[] product_ids) {
+//    }
 }

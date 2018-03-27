@@ -5,7 +5,7 @@ public class User {
 
 
     public static User getUser(Integer id) {
-        return DataBase.getUser(id);
+        return DataBase.getInstance().getUser(id);
     }
 
     public void setEmail(String email) {

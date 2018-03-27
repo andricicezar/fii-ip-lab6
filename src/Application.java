@@ -1,14 +1,14 @@
 public class Application {
 
-    getProduct(int idProduct) {
-        return Product.getProduct(idProduct);
-    }
+//    getProduct(int idProduct) {
+//        return Product.getProduct(idProduct);
+//    }
 
-    getUser(int idUser) {
+    public User getUser(int idUser) {
         return User.getUser(idUser);
     }
 
-    createOrder(int idOrder) {
+    public Order createOrder(int idOrder) {
         return Order.getOrder(idOrder);
     }
 }
