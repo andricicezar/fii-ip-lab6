@@ -9,19 +9,25 @@ public class DataBase {
     private static DataBase instance;
 
     private DataBase() {
+        ArrayList<Integer> listOfIds = new ArrayList<Integer>();
         usersList = new ArrayList<User>();
         ordersList = new ArrayList<Order>();
         productsList = new ArrayList<Product>();
-        User first = new User();
+        User firstUser = new User();
         Product product = new Product();
         Order order = new Order(200);
-
-
-        first.setEmail("a");
-        first.setUsername("firstUser");
+        listOfIds.add(product.getId());
+        //set user properties
+        firstUser.setEmail("a");
+        firstUser.setUsername("firstUser");
+        firstUser.setId(1);
+        //set product properties
         product.setName("Computer");
         product.setPrice(500);
         product.setId(1000);
+        //set order properties
+        order.setProductsId(listOfIds);
+        order.setUserId(firstUser.getId());
     }
 
     public static DataBase getInstance() {
