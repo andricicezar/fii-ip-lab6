@@ -32,11 +32,11 @@ public class Order {
     }
 
     public static Order getOrder(Integer id) {
-        return BD.getOrder(id);
+        return DataBase.getOrder(id);
     }
 
     public static Order create(Integer user_id, Integer... product_ids) {
-        return BD.createOrder(user_id, product_ids);
+        return DataBase.createOrder(user_id, product_ids);
     }
 
 }
