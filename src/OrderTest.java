@@ -52,7 +52,7 @@ public class OrderTest {
 
 
         try {
-            Order.create(200,);
+            Order.create(200);
             Assert.fail("Produs nedat");
         } catch (Exception e) {
 
